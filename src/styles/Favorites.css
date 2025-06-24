@@ -1,0 +1,28 @@
+import React from 'react';
+import MovieList from './MovieList';
+import '../../styles/Favorites.css';
+
+function Favorites({ favorites, onMovieClick, onToggleFavorite }) {
+  return (
+    <div className="favorites-page baumans-family">
+      <h2 className="glow-text" style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+        ❤️ Your Favorites
+      </h2>
+
+      {favorites.length > 0 ? (
+        <MovieList
+          movies={favorites}
+          onMovieClick={onMovieClick}
+          onToggleFavorite={onToggleFavorite}
+          favorites={favorites}
+        />
+      ) : (
+        <p style={{ textAlign: 'center', marginTop: '2rem' }}>
+          No favorites yet. Start saving movies you love!
+        </p>
+      )}
+    </div>
+  );
+}
+
+export default Favorites;

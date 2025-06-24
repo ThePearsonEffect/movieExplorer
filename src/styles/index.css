@@ -1,0 +1,120 @@
+/* === Global Reset & Font === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Baumans', system-ui, sans-serif;
+  background: linear-gradient(135deg, #000000 0%, #121212 60%);
+  background-attachment: fixed;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* === Centered Layout === */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* === Logo Text === */
+h1, .glow-text {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ffd700;
+  text-shadow: 0 0 8px #00f0ff, 0 0 16px #00f0ff;
+  margin-bottom: 1rem;
+}
+
+/* === Nav Links === */
+nav a {
+  color: #00ffff;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff4d6d;
+  text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d;
+}
+
+
+/* === Search Bar and Button === */
+.search-bar {
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 220px;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: black;
+  border: 2px solid #00f0ff;
+  border-radius: 10px;
+  color: #00f0ff;
+  box-shadow: 0 0 8px #00f0ff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: #00f0ff;
+  color: black;
+}
+
+/* === Favorites Button === */
+.favorite-button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #ff4d6d;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.favorite-button:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 5px #ff4d6d;
+}
+
+/* === Footer === */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: auto;
+  padding: 1rem;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ff4d6d; }
+  50% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ff4d6d; }
+  100% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ff4d6d; }
+}
+
+.logo-title {
+  animation: pulse 2s infinite;
+}

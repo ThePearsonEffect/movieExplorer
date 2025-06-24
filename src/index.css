@@ -1,0 +1,108 @@
+<p className="empty-state">Search for a movie to get started.</p>
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #4da6ff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 0.75rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff;
+}
+
+body {
+  font-family: "Baumans", system-ui;
+  background: linear-gradient(135deg, #000000 0%, #121212 40%, #1f1f1f 100%);
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #ffcc00;
+  text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff;
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.toggle-bar {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.empty-state {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  text-shadow: 0 0 4px #00f0ff;
+}
+
+.logo-title {
+  font-family: "Baumans", system-ui;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-align: center;
+  text-shadow: 0 0 10px #ff4d6d, 0 0 20px #00f0ff;
+  margin-bottom: 0.5rem;
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px #ff4d6d, 0 0 20px #00f0ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff4d6d, 0 0 30px #00f0ff;
+  }
+}
+
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 4px #00f0ff;
+  }
+  50% {
+    text-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff;
+  }
+  100% {
+    text-shadow: 0 0 4px #00f0ff;
+  }
+}
